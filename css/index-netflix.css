@@ -1,0 +1,430 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Netflix Sans';
+}
+
+body {
+    background-color: #121516;
+}
+
+
+/* Inicio */
+
+.top-container {
+    height: 64px;
+    background-color: linear-gradient(#fff, #000);
+}
+
+.container-all {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    user-select: none;
+}
+
+.container-all h1 {
+    color: #fff;
+    font-size: 4.5em;
+    margin: 2rem 0;
+    text-align: center;
+    font-weight: unset;
+}
+
+
+/* Inicio  Lista de perfiles*/
+
+.lista-profiles {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.lista-profiles ul {
+    display: inline;
+    list-style: none;
+}
+
+.lista-profiles ul li {
+    display: inline-block;
+}
+
+.lista-profiles ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.img-profile {
+    max-width: 184px;
+    max-height: 184px;
+    min-width: 84px;
+    min-height: 84px;
+    margin: 10px 2vh;
+    position: relative;
+}
+
+.img-profile i {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    font-size: 2.3vw;
+    display: none;
+}
+
+.lista-profiles ul li a:hover {
+    color: #fff;
+    border: 4px solid #fff;
+}
+
+.img-profile img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.cont-name-profile {
+    text-align: center;
+}
+
+.name-profile {
+    font-size: 1.7rem;
+    color: #636969;
+}
+
+
+/* button Administrator */
+
+.container-buttom-administrator {
+    text-align: center;
+}
+
+.container-buttom-administrator button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid grey;
+    color: grey;
+    cursor: pointer;
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+    margin: 2em 0 1em;
+    padding: 0.5em 1.5em;
+}
+
+.container-buttom-administrator button:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+#Button-listo {
+    display: none;
+    color: #000;
+    background: #fff;
+    font-weight: 600;
+}
+
+#Button-listo:hover {
+    background: Red;
+    color: #fff;
+}
+
+
+/* Inicio Responsivo */
+
+@media screen and (max-width: 1300px) {
+    .container-all h1 {
+        font-size: 3.5vw;
+    }
+    .img-profile {
+        max-width: 110px;
+        max-height: 110px;
+        margin: 10px 1vh;
+    }
+    .img-profile i {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container-all h1 {
+        font-size: 4.5vw;
+    }
+    .img-profile {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    .container-buttom-administrator button {
+        font-size: 1.8vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .container-all h1 {
+        font-size: 30px;
+    }
+    .img-profile {
+        max-width: 84px;
+        max-height: 84px;
+        margin: 10px 1vh;
+    }
+    .container-buttom-administrator button {
+        font-size: 13px;
+    }
+}
+
+
+/* Editar Perfil */
+
+.container-full-edit {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: left;
+}
+
+.container-edit-perfil {
+    display: flex;
+    padding: 2em 0;
+    flex-direction: column;
+}
+
+
+/* Titulo y imagen */
+
+.title-edit {
+    color: #fff;
+    font-size: 4vw;
+    border-bottom: 1px solid #333;
+}
+
+.box-img {
+    margin-right: 1.5vw;
+    max-width: 180px;
+    min-width: 80px;
+    white-space: nowrap;
+    width: 8vw;
+}
+
+.img-edit {
+    position: relative;
+}
+
+.img-edit i {
+    position: absolute;
+    bottom: 1.3rem;
+    left: 1.3rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.img-edit img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+
+/* Nombre usuario */
+
+.edit-nombre-user {
+    width: 100%;
+    margin: 0 0 1rem 0;
+}
+
+.edit-nombre-user input {
+    background: #666;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.3vw;
+    height: 2em;
+    margin: 0 0.8em 0 0;
+    padding: 0.2em 0.6em;
+    text-indent: 0.1vw;
+    width: 100%;
+}
+
+
+/* Idioma */
+
+.edit-idioma {
+    margin: 0 0 1rem 0;
+}
+
+.edit-idioma h1 {
+    color: #ccc;
+    font-size: 1.3vw;
+    margin-bottom: 7px;
+}
+
+
+/* alias Juegos */
+
+.edit-alias-games {
+    margin: 0 0 1rem 0;
+}
+
+.edit-alias-games h1 {
+    color: #ccc;
+    font-size: 1.3vw;
+    margin-bottom: 7px;
+}
+
+.edit-alias-games p {
+    color: #fff;
+    font-size: 1vw;
+    margin: 0 0 2rem 0;
+}
+
+.edit-alias-games a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1vw;
+}
+
+.edit-alias-games input {
+    background: #666;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.3vw;
+    height: 2em;
+    margin: 0 0.8em 0 0;
+    padding: 0.2em 0.6em;
+    text-indent: 0.1vw;
+    width: 100%;
+}
+
+
+/* Edit Edad */
+
+.edit-config-edad {
+    margin: 0 0 2rem;
+    border-top: 1px solid #333;
+}
+
+.edit-config-edad h1 {
+    color: #ccc;
+    font-size: 1.3vw;
+    margin: 1.5em 0 10px 0
+}
+
+.edit-config-edad ul li {
+    background: #333;
+    border-radius: 2px;
+    font-weight: 500;
+    margin-right: 5px;
+    padding: 7px 10px;
+    color: #fff;
+    display: inline-block;
+}
+
+.edit-config-edad p {
+    color: #fff;
+    font-size: 1vw;
+    padding: 1rem 0;
+}
+
+.edit-config-edad button {
+    border: 1px solid grey;
+    background: transparent;
+    color: grey;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+}
+
+.edit-config-edad button:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+
+/* Controles Reproduccion */
+
+.edit-controles-reproduccion {
+    border-top: 1px solid #333;
+    margin-bottom: 1rem;
+}
+
+.edit-controles-reproduccion h2 {
+    color: #ccc;
+    font-size: 1.3vw;
+    margin: 1.5rem 0 5px;
+}
+
+.edit-controles-reproduccion div {
+    display: block;
+    padding: 10px 0;
+}
+
+.edit-controles-reproduccion input {
+    float: left;
+    margin-right: 0.5rem;
+    width: 25px;
+    height: 25px;
+}
+
+.edit-controles-reproduccion p {
+    font-size: 0.9vw;
+    text-align: left;
+    color: #fff;
+    margin: 5px 0;
+}
+
+
+/* botones Config */
+
+.edit-buttons {
+    display: inline-block;
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+}
+
+.btn-d {
+    font-size: 1vw;
+    margin-right: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button-guardar-perfil {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 0.5em 1.5em;
+}
+
+.button-guardar-perfil:hover {
+    color: #fff;
+    background: red;
+    border: 1px solid red;
+}
+
+.button-cancelar-perfil {
+    border: 1px solid grey;
+    background: transparent;
+    color: grey;
+    padding: 0.5em 1.5em;
+}
+
+.btn-diseno:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.button-eliminar-perfil {
+    border: 1px solid grey;
+    background: transparent;
+    color: grey;
+    padding: 0.5em 1.5em;
+}

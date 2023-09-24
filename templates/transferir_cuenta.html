@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="icon" href="../img/Netflix_logo.png">
+    <link rel="stylesheet" href="../css/transferir_cuenta.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Open+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/943e4f11a2.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/943e4f11a2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></script>
+    <script src="https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json">
+    </script>
+</head>
+
+<body>
+    <!-- Header Transferir cuenta -->
+    <header>
+        <nav>
+            <div class="menu-transferir">
+                <a href="index.html">
+                    <div class="img-netflix-transferir">
+                        <img src="../img/netflix-foto.jpg" alt="">
+                    </div>
+                </a>
+                <div class="btn-cerrar-sesion">
+                    <a href="#">
+                        <button>Cerrar sesión</button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Body Transferir cuenta paso 1-->
+    <div class="container-transferir" id="container-transferir" style="display: none;">
+        <div class="content-transferir-1">
+            <div class="img-cuenta-transferir">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_TwhejcB_QAKNx7TGviTcx0BPMINC33WFlCHMUKGFWA9CTmtE_dX3Ty5_FW04ueIcpBQ&usqp=CAU" alt="Error">
+            </div>
+            <div class="text-1">
+                <span>Paso 1 de 3</span>
+                <h1>Simplificamos la transferencia de este perfil</h1>
+            </div>
+            <div class="text-2">
+                <ul>
+                    <li><i class="fa-solid fa-check"></i>
+                        <p>Transfiere el historial de contenido visto, las recomendaciones, Mi lista, Los juegos guardados, La configuracion y más</p>
+                    </li>
+                    <li><i class="fa-solid fa-check"></i>
+                        <p>Te tu propia cuenta y conserva todo lo que te encanta sobre este perfil</p>
+                    </li>
+                    <li><i class="fa-solid fa-check"></i>
+                        <p>Conservaremos una copia de respaldo de este perfil en la cuenta original</p>
+                    </li>
+                </ul>
+                <div class="copia-p">
+                    <p>*La copia de respaldo no incluira los juegos guardados.</p>
+                </div>
+            </div>
+            <div class="text-3">
+                <button onclick="Mostrar_paso1_1();">Siguiente</button>
+                <button>Más info</button>
+            </div>
+        </div>
+    </div>
+    <!-- Body Transferir cuenta paso 1-1 -->
+    <div class="container-transferir-config-member" id="container-transferir-config-member" style="display: none;">
+        <div class="content-transferir-config">
+            <div class="trans-text-1">
+                <span>Paso 1 de 3</span>
+                <h1>Primero, configuremos tu membresía nueva</h1>
+                <p>Para comenzar, solo necesitamos tu direccíon de email.Notificaremos al titular de la cuenta original después de que se complete la transferencia.</p>
+            </div>
+            <div class="trans-text-2">
+                <div class="img-text-2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_TwhejcB_QAKNx7TGviTcx0BPMINC33WFlCHMUKGFWA9CTmtE_dX3Ty5_FW04ueIcpBQ&usqp=CAU" alt="">
+                </div>
+                <div class="inputs-member">
+                    <form action="#">
+                        <input type="text" placeholder="Direccion de email nueva">
+                        <input type="text" placeholder="Contraseña nueva">
+                    </form>
+                </div>
+            </div>
+            <div class="trans-text-3">
+                <button>Siguiente</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- Body Transferir cuenta paso 2 de 3 -->
+    <div class="container-elige-plan-1" id="container-elige-plan-1" style="display: none;">
+        <div class="content-elige-plan-1">
+            <div class="elige-text-1">
+                <div class="img-elige">
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <span>Paso 2 de 3</span>
+                <h1>Elige tu plan.</h1>
+            </div>
+            <div class="elige-text-2">
+                <ul>
+                    <li><i class="fa-solid fa-check"></i>
+                        <p>Sin Compromisos, cancela cuando quieras.</p>
+                    </li>
+                    <li><i class="fa-solid fa-check"></i>
+                        <p>Todo Netflix a un buen precio.</p>
+                    </li>
+                    <li><i class="fa-solid fa-check"></i>
+                        <p>Contenido ilimitado en todos tus dispositivos.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-elige-plan-1">
+                <button>Siguiente</button>
+            </div>
+        </div>
+    </div>
+    <!-- Body Transferir cuenta paso 2 de 3 parte 2-->
+    <div class="container-elige-plan-2" id="container-elige-plan-2" style="display: none;">
+        <div class="content-elige-plan-2">
+            <div class="ideal-text-1">
+                <span>Paso 2 de 3</span>
+                <h1>Selecciona el plan ideal para ti</h1>
+                <div class="list-plan-ideal">
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>
+                            <p>Ve todo lo que quieras. Sin anuncios</p>
+                        </li>
+                        <li><i class="fa-solid fa-check"></i>
+                            <p>Recomendaciones exclusivas para ti.</p>
+                        </li>
+                        <li><i class="fa-solid fa-check"></i>
+                            <p>Puedes cambiar de plan o cancelar cuando quieras.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-2-3">
+                <div class="ideal-text-2">
+                    <div class="planes-elige">
+                        <div class="planes-elige-body">
+                            <span>Basico</span>
+                            <span>Estándar</span>
+                            <span>Premium</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ideal-text-3">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="first-td-table">Precio Mensual</td>
+                                <td>
+                                    <div class="table-td-body">
+                                        $5.940
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-td-body">
+                                        $8.320
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-td-body">
+                                        $10.700
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="first-td-table">Calidad de video</td>
+                                <td>
+                                    <div class="table-td-body">
+                                        Buena
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-td-body">
+                                        Mejor
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-td-body">
+                                        Optima
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="first-td-table">Resolucion</td>
+                                <td>
+                                    <div class="table-td-body">
+                                        720p
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-td-body">
+                                        1080p
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-td-body">
+                                        4k+HDR
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: none;">
+                                <td class="first-td-table">Ve Netflix en tu Tv, Computadora,celular y tablet</td>
+                                <td>
+                                    <div class="table-td-body">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-td-body">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="table-td-body">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="ideal-text-4">
+                <p>La disponibilidad del contenido en HD(720p), Full HD(1080p), Ultra HD(4k) y HDR depende de tu servicio de internet y del dispositivo en uso. no todo el contenido esta disponible en todas las resoluciones. Consulta nuestros <a href="#">Terminos de uso</a>                    para obtener mas información.</p>
+
+                <p>Solo las personas que vivan contigo pueden usare tu cuenta. Puedes ver Netflix en 4 dispositivos al mismo tiempo con el plan Premium, en 2 con el plan estandar y en 1 con el plan Basico.</p>
+            </div>
+            <div class="ideal-text-5-btn">
+                <button>Siguiente</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- Body Transferir cuenta paso 3 de 3-->
+    <div class="container-pagar-plan" id="container-pagar-plan" style="display: none;">
+        <div class="content-pagar-plan">
+            <div class="img-lock-pagar">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="pagar-text-1">
+                <span>Paso 3 de 3</span>
+                <h1>Elige como quieres pagar</h1>
+                <p>Tu forma de pago esta encriptada y puedes cambiarla cuando quieras.</p>
+                <span class="span-pagar-text-1">Transacciones seguras y confiables.</span>
+                <br>
+                <span class="span-pagar-text-1">Cancela facilmente online.</span>
+            </div>
+            <div class="pagar-text-2">
+                <div class="span-lock-text-2">
+                    <span>Encriptado de extremo a extremo<i class="fa-solid fa-lock"></i></span>
+                </div>
+                <div class="body-pagar-plan">
+                    <p>Tarjeta de credito o debito</p>
+                    <div class="img-body-pagar-all">
+                        <div class="img-body-pagar">
+                            <img src="../img/visa.jpg" alt="">
+                        </div>
+                        <div class="img-body-pagar">
+                            <img src="../img/mastercard.jpg" alt="">
+                        </div>
+                        <div class="img-body-pagar">
+                            <img src="../img/america_express.jpg" alt="">
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="body-pagar-plan">
+                    <p>Agregar a la factura de telefonia celular</p>
+                    <div class="img-body-pagar">
+                        <img src="../img/entel_logo.jpg" alt="">
+                    </div>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="body-pagar-plan">
+                    <p>Codigo de regalo</p>
+                    <div class="img-body-pagar">
+                        <img src="../img/netflix-foto.jpg" alt="">
+                    </div>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-pagar-tarjeta" id="container-pagar-tarjeta" style="display: none;">
+        <div class="content-pagar-tarjeta">
+            <div class="text-pagar-tarjeta-1">
+                <span>Paso 3 de 3</span>
+                <h1>Configura tu tarjeta de crédito o débito</h1>
+                <div class="img-pagar-tarjeta">
+                    <div class="img-body-pagar-tarjeta">
+                        <img src="../img/visa.jpg" alt="">
+                    </div>
+                    <div class="img-body-pagar-tarjeta">
+                        <img src="../img/mastercard.jpg" alt="">
+                    </div>
+                    <div class="img-body-pagar-tarjeta">
+                        <img src="../img/america_express.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="text-pagar-tarjeta-2">
+                <form action="#">
+                    <input type="text" required placeholder="Nombre">
+                    <input type="text" required placeholder="Apellido">
+                    <input type="number" required placeholder="Número de tarjeta">
+                    <input type="text" required placeholder="Fecha de vencimiento(MM/AA)">
+                    <div class="input-codigo">
+                        <input type="text" required placeholder="Código de seguridad (CVV)">
+                        <i class="fa-regular fa-circle-question"></i>
+                    </div>
+
+                </form>
+            </div>
+            <div class="text-pagar-tarjeta-3">
+                <div class="text-valor-tarjeta">
+                    <span>$10.700 al mes</span>
+                    <span>Plan Premium</span>
+                </div>
+                <button>Cambiar</button>
+            </div>
+            <div class="text-pagar-tarjeta-4">
+                <div class="text-p-1">
+                    <p>Los pagos se procesaran internaciolmente. Es posible que se apliquen comisiones bancarias adicionales</p>
+                </div>
+                <div class="text-p-2">
+                    <p>Al hacer click en el boton iniciar membresía,aceptas nuestros <a href="#">Terminos de uso</a> y nuestra <a href="#">Declaracion de privacidad</a> ,declaras que tienes mas de 18 años y aceptas que <span>Netflix continuará tu membresia de manera automatica y,hasta que la canceles, te facturara tu cuota de membresia
+                        (actualmente de $10.700 al mes) a traves de la forma de pago elegida.Puedes cancelarla en cualquier momento para evitar cargos en el futuro.
+                    </span>Para hacerlo, ve a Cuenta y haz click en Cancelar Membresia.</p>
+                </div>
+                <div class="btn-iniciar-membresia">
+                    <button>Iniciar membresía</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-facturacion-celular" id="container-pagar-tarjeta" style="display: none;">
+        <div class="content-facturacion-celular">
+            <div class="facturacion-celular-1">
+                <span>Paso 3 de 3</span>
+                <h1>Configura la facturación a través de tu operador de telefonía celular</h1>
+                <div class="img-fac-celular-1">
+                    <img src="../img/entel_logo.jpg" alt="">
+                </div>
+                <p>La membresía de Netflix se agregará a tu factura de telefonía celular.</p>
+                <p class="p-celular">Tambien se usará tu número en caso de que olvides tu contraseña y para mensajes importantes de la cuenta.Es posible que se apliquen tarifas de SMS.</p>
+            </div>
+            <div class="facturacion-celular-2">
+                <div class="input-numero-celular">
+                    <div class="input-numero-content">
+                        <img src="../img/chile.jpg" alt="">
+                        <span>+56</span>
+                    </div>
+                    <div class="input-celular-fac">
+                        <input type="text" placeholder="Número de celular">
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-pagar-tarjeta-3">
+                <div class="text-valor-tarjeta">
+                    <span>$10.700 al mes</span>
+                    <span>Plan Premium</span>
+                </div>
+                <button>Cambiar</button>
+            </div>
+            <div class="text-pagar-tarjeta-4">
+                <div class="text-p-2" style="padding-top: 20px;">
+                    <p>Al hacer click en el boton Verificar número de teléfono, aceptas nuestros <a href="#">Terminos de uso</a> y nuestra <a href="#">Declaracion de privacidad</a> ,declaras que tienes mas de 18 años y aceptas que <span>Netflix continuará tu membresia de manera automatica y,hasta que la canceles, te facturara tu cuota de membresia
+                        (actualmente de $10.700 al mes) a traves de la forma de pago elegida.Puedes cancelarla en cualquier momento para evitar cargos en el futuro.
+                    </span>Para hacerlo, ve a Cuenta y haz click en Cancelar Membresia.</p>
+                </div>
+                <div class="btn-iniciar-membresia">
+                    <button>Verificar número de teléfono</button>
+                </div>
+                <div class="fac-text-codigo">
+                    <span>Te enviaremos un codigo por SMS para verificar tu número.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-codigo-regalo">
+        <div class="content-codigo-regalo">
+            <div class="text-codigo-regalo-1">
+                <span>Paso 3 de 3</span>
+                <h1>Ingresa tu código de regalo</h1>
+                <div class="input-codigo-regalo">
+                    <input type="text" placeholder="PIN o código de la tarjeta de regalo">
+                </div>
+            </div>
+
+            <div class="text-pagar-tarjeta-3">
+                <div class="text-valor-tarjeta">
+                    <span>$10.700 al mes</span>
+                    <span>Plan Premium</span>
+                </div>
+                <button>Cambiar</button>
+            </div>
+            <div class="btn-canjear-codigo">
+                <button>Canjear codigo de regalo</button>
+                <div class="p-canjear-codigo">
+                    <p>Esta página esta protegida por Google reCAPTCHA para comprobar que no eres un robot. <a href="#">Mas info.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-footer-1">
+        <div class="container-footer-2">
+            <div class="content-1">
+                <p>¿Preguntas? Llama al 800 914 143</p>
+            </div>
+            <div class="content-2">
+                <div class="lista-footer">
+                    <ul>
+                        <a href="#">
+                            <li>Preguntas Frecuentes</li>
+                        </a>
+                        <a href="#">
+                            <li>Privacidad</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="lista-footer">
+                    <ul>
+                        <a href="#">
+                            <li>Centro de ayuda</li>
+                        </a>
+                        <a href="#">
+                            <li>Preferencias de cookies</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="lista-footer">
+                    <ul>
+                        <a href="#">
+                            <li>Tienda de Netflix</li>
+                        </a>
+                        <a href="#">
+                            <li>Informacion Corporativo¿a</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="lista-footer">
+                    <ul>
+                        <a href="#">
+                            <li>Terminos de uso</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/transferencia.js"></script>
+</body>
+
+</html>

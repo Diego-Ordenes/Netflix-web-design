@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Netflix Sans';
+}
+
+
+/* Menu */
+
+header {
+    padding: 0 4%;
+    height: 70px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .7) 10%, transparent);
+    transition: 0.8s;
+}
+
+nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+}
+
+.img-netflix {
+    max-width: 90px;
+    max-height: 90px;
+    display: flex;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.img-netflix img {
+    width: 100%;
+    background-color: none;
+}
+
+.nav_menu ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.nav_menu ul li:hover {
+    color: #CFC9CB;
+}
+
+.nav_menu_perfil {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: flex-end;
+    /* position: absolute;
+    right: 4%;
+    top: 0; */
+}
+
+.img-menu-perfil-user {
+    width: 30px;
+    display: flex;
+    max-height: 30px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.img-menu-perfil-user img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.img-menu-perfil-user i {
+    margin-left: 10px;
+    transition: 0.3s ease all;
+}
+
+.arrow-menu-responsive {
+    position: relative;
+}
+
+.arrow-menu-responsive i {
+    color: #fff;
+    position: absolute;
+    top: -10px;
+    left: 49%;
+    bottom: 0;
+    right: 0;
+}
+
+.arrow-menu-responsive div {
+    background: #fff;
+    height: 2px;
+    width: 100%;
+}
+
+.menu-responsive-all {
+    position: fixed;
+    width: 260px;
+    height: 270px;
+    background-color: #333;
+    z-index: 9;
+    display: none;
+    margin-top: 5px;
+}
+
+.menu-responsive-container ul a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-responsive-container ul a:hover {
+    text-decoration-color: #fff;
+    color: #fff;
+}
+
+.menu-responsive-container ul a li {
+    list-style: none;
+    text-align: center;
+    font-size: 1rem;
+    color: #9EA7A9;
+    width: 100%;
+    padding: 13px 0;
+}
+
+.menu-responsive-container ul a li:hover {
+    text-decoration-color: #fff;
+}
+
+@media screen and (max-width:1000px) {
+    .menu-pc {
+        display: none;
+    }
+    .menu-responsive-btn {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .img-netflix {
+        max-width: 70px;
+    }
+    .nav_menu ul li {
+        font-size: 0.7rem;
+    }
+    .buscador-input form input:focus {
+        width: 100px !important;
+    }
+}
+
+
+/* Menu Scroll */
+
+header.abajo {
+    position: fixed;
+    background-color: rgb(20, 20, 20);
+    width: 100%;
+    z-index: 10;
+}
+
+
+/* menu buscador - icono - perfil */
+
+.form-div-buscador {
+    position: relative;
+}
+
+.form-div-buscador i {
+    position: absolute;
+    font-size: 1.5rem;
+    cursor: pointer;
+    top: 5px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.buscador-input form input {
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    padding: 10px 15px 10px 35px;
+    /* background-image: url(https://e7.pngegg.com/pngimages/919/607/png-clipart-magnifying-glass-computer-icons-magnification-magnifying-glass-glass-logo.png); */
+    background-size: 1.6rem;
+    background-repeat: no-repeat;
+    width: 0px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.buscador-input form input:focus {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #333;
+    outline: none;
+    width: 250px;
+}
+
+.sep-element {
+    margin: 0 10px;
+}
+
+
+/* Recomendaciones Menu*/
+
+.icon-recomendation button {
+    background: none;
+    border: none;
+}
+
+.icon-recomendation button i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    background: none;
+    border: none;
+}
+
+.recomendation-body ul li {
+    list-style: none;
+}
+
+.recomendation-body ul li a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.recomendation-body-complete {
+    padding: 20px;
+    border-bottom: 1px solid grey;
+}
+
+.recomendation {
+    position: fixed;
+    width: 450px;
+    height: 700px;
+    background-color: #333;
+    right: 7%;
+    margin-top: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: none;
+    z-index: 9;
+}
+
+.img-recomendation {
+    max-width: 130px;
+    float: left;
+    margin-right: 20px;
+}
+
+.img-recomendation img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.writing h2,
+span {
+    line-height: 1.4;
+}
+
+.writing h2 {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.writing span {
+    color: grey;
+    font-size: 1rem;
+}
+
+
+/* Perfil usuario Menu */
+
+.perfil-user {
+    position: fixed;
+    width: 230px;
+    height: 430px;
+    background-color: #333;
+    display: none;
+    z-index: 9;
+    right: 5%;
+    margin-top: 5px;
+}
+
+.Escrit-Element {
+    text-align: left;
+    color: #fff;
+    font-size: 1rem;
+    padding-left: 40px;
+}
+
+.cerrar-sesion-user {
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 1px solid grey;
+}
+
+.perfil-user-body ul li {
+    padding: 15px;
+    list-style: none;
+}
+
+.perfil-user-body ul a:hover {
+    text-decoration-color: #fff;
+}
+
+.img-perfil-user {
+    max-width: 30px;
+    float: left;
+}
+
+.img-perfil-user img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.icon-user i {
+    font-size: 1.5rem;
+    color: #fff;
+    float: left;
+}

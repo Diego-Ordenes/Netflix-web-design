@@ -1,0 +1,840 @@
+body {
+    user-select: none;
+    background: #141414;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+/* Cuerpo Inicio Netflix Video */
+
+.container-video {
+    width: 100vw;
+    position: relative;
+    background: linear-gradient(77deg, rgba(0, 0, 0, .6), transparent 85%);
+}
+
+.container-video video {
+    opacity: 0.9;
+    width: 100%;
+}
+
+.img-video-netflix {
+    width: 100%;
+    height: 85vh;
+}
+
+.content-all {
+    padding: 0 4%;
+    margin: auto;
+}
+
+
+/* Contenido video */
+
+.content-video {
+    position: absolute;
+    top: 27%;
+    left: 5%;
+    width: 36%;
+    user-select: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.p-content p {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1vw;
+    margin-top: 10px;
+}
+
+.img-content-video {
+    max-width: 200px;
+}
+
+.img-content-video img {
+    width: 100%;
+    min-height: 13.2vw;
+}
+
+.btn-config-video {
+    padding-top: 15px;
+    display: flex;
+}
+
+.btn-config-video i {
+    padding-right: 10px;
+}
+
+.btn-config-video button {
+    cursor: pointer;
+    padding: 8px 20px;
+    font-size: 2rem;
+    background-color: #fff;
+    border-radius: 3px;
+    border: none;
+    margin-right: 10px;
+}
+
+.btn-config-video button:nth-child(2) {
+    background-color: rgba(109, 109, 110, 0.7);
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 3px;
+    padding: 8px 20px;
+}
+
+.btn-config-video button:hover {
+    background-color: #A3A3A3;
+}
+
+@media screen and (max-width:1500px) {
+    .btn-config-video button {
+        font-size: 1rem !important;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .btn-config-video button {
+        font-size: 0.7rem !important;
+    }
+}
+
+
+/* Carrusel Peliculas - series */
+
+
+/* Contenedor titulo y controles */
+
+.contenedor-titulo-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+    background: #fff;
+    height: 2px;
+    width: 13px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+    background: grey;
+}
+
+
+/* Contenedor principal y flechas */
+
+.peliculas-recomendadas {
+    margin: 3vw 0;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 6;
+    transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+    left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    right: 0;
+}
+
+
+/* ----------------- Carousel ------------------- */
+
+.peliculas-recomendadas .contenedor-carousel {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+    /* min-width: 20%; */
+    min-width: 16.5%;
+    max-height: 170px;
+    transition: 1s ease-in all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    margin: 0 5px;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    border-radius: 3px;
+}
+
+
+/* .pelicula:hover,
+.pelicula_p2:hover {
+    transform: scale(1.2);
+} */
+
+@media screen and (max-width:800px) {
+    .peliculas-recomendadas .contenedor-carousel {
+        overflow: visible;
+    }
+    .peliculas-recomendadas .contenedor-carousel .carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .peliculas-recomendadas .indicadores,
+    .peliculas-recomendadas .flecha-derecha,
+    .peliculas-recomendadas .flecha-izquierda {
+        display: none;
+    }
+}
+
+
+/* -------------------------------------------------  Carrusel Peliculas - series Parte 2 -----------------------------------------------------------------*/
+
+
+/* Contenedor titulo y controles */
+
+.contenedor-titulo-controles_p2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.contenedor-titulo-controles_p2 h3 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.contenedor-titulo-controles_p2 .indicadores_p2 button {
+    background: #fff;
+    height: 2px;
+    width: 13px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.contenedor-titulo-controles_p2 .indicadores_p2 button:hover,
+.contenedor-titulo-controles_p2 .indicadores_p2 button.activo_p2 {
+    background: grey;
+}
+
+
+/* Contenedor principal y flechas */
+
+.peliculas-recomendadas_p2 {
+    margin-bottom: 70px;
+}
+
+.peliculas-recomendadas_p2 .contenedor-principal_p2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.peliculas-recomendadas_p2 .contenedor-principal_p2 .flecha-izquierda_p2,
+.peliculas-recomendadas_p2 .contenedor-principal_p2 .flecha-derecha_p2 {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 6;
+    transition: .2s ease all;
+}
+
+.peliculas-recomendadas_p2 .contenedor-principal_p2 .flecha-izquierda_p2:hover,
+.peliculas-recomendadas_p2 .contenedor-principal_p2 .flecha-derecha_p2:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas_p2 .contenedor-principal_p2 .flecha-izquierda_p2 {
+    left: 0;
+}
+
+.peliculas-recomendadas_p2 .contenedor-principal_p2 .flecha-derecha_p2 {
+    right: 0;
+}
+
+
+/* ----------------- Carousel ------------------- */
+
+.peliculas-recomendadas_p2 .contenedor-carousel_p2 {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas_p2 .contenedor-carousel_p2 .carousel_p2 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas_p2 .contenedor-carousel_p2 .carousel_p2 .pelicula_p2 {
+    /* min-width: 20%; */
+    min-width: 16.5%;
+    /* max-height: 150px; */
+    transition: 1s ease-in all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    margin: 0 5px;
+}
+
+.peliculas-recomendadas_p2 .contenedor-carousel_p2 .carousel_p2 .pelicula.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.peliculas-recomendadas_p2 .contenedor-carousel_p2 .carousel_p2 .pelicula_p2 img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    border-radius: 3px;
+}
+
+@media screen and (max-width:800px) {
+    .peliculas-recomendadas_p2 .contenedor-carousel_p2 {
+        overflow: visible;
+    }
+    .peliculas-recomendadas_p2 .contenedor-carousel_p2 .carousel_p2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .peliculas-recomendadas_p2 .indicadores_p2,
+    .peliculas-recomendadas_p2 .flecha-derecha_p2,
+    .peliculas-recomendadas_p2 .flecha-izquierda_p2 {
+        display: none;
+    }
+}
+
+
+/* -------------------------- Contenido de peliculas al hacer click -------------------------*/
+
+.contenedor-peliculas-click-fondo {
+    position: fixed;
+    height: 100%;
+    width: 850px;
+    background: #141414;
+    top: 150px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
+    margin: auto;
+    overflow-x: scroll;
+    display: none;
+}
+
+.contenedor-peliculas-click-fondo::-webkit-scrollbar {
+    width: 2px;
+}
+
+.contenedor-peliculas-click-fondo::-webkit-scrollbar-thumb {
+    background: #ADADAD;
+}
+
+.contenido-img_video {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    cursor: pointer;
+}
+
+.contenido-img_video img {
+    width: 100%;
+    height: 100%;
+}
+
+.selector_img_video_pelicula {
+    padding-bottom: 30px;
+}
+
+.selectores_img_video {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+}
+
+.selector_img_video_pelicula {
+    width: 40%;
+}
+
+.buttons_selectores_pelicula {
+    position: relative;
+}
+
+.buttons_selectores_pelicula button {
+    border: none;
+    border-radius: 3px;
+    background: #fff;
+    color: #141414;
+    padding: 5px 20px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.buttons_selectores_pelicula button:hover {
+    background: #EBEBEB;
+}
+
+.buttons_selectores_pelicula button i {
+    padding-right: 10px;
+}
+
+.icon-selectores_pelicula {
+    margin: 0 5px;
+    font-size: 1.3rem;
+    color: #A3A3A3;
+    cursor: pointer;
+    background-color: #333;
+    padding: 7px;
+    border-radius: 50%;
+    border: 1px solid #A3A3A3;
+    transition: 0.5s ease-in-out all;
+}
+
+.icon-selectores_pelicula:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.volume_icon {
+    float: right;
+    right: 5%;
+    position: absolute;
+}
+
+.circle_x {
+    float: right;
+    right: 0;
+    top: 0;
+    position: absolute;
+    margin: 1rem;
+}
+
+.circle_x i {
+    color: #fff;
+    background-color: #333;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    padding: 8px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+}
+
+
+/* Cuerpo del video/img */
+
+.contenido-cuerpo-img_video {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 10px 5% 70px;
+    font-size: 1rem;
+}
+
+.contenido-escritura {
+    padding-right: 20px;
+}
+
+.contenido-escritura p span:nth-child(1) {
+    border: 1px solid #fff;
+    background-color: #141414;
+    ;
+    padding: 0 3px;
+    margin: 0 5px;
+}
+
+.contenido-escritura p span:nth-child(2) {
+    border: 1px solid #fff;
+    background-color: #141414;
+    ;
+    padding: 0 4px;
+    font-size: 0.7rem !important;
+}
+
+.contenido-escritura p span:nth-child(3) {
+    font-weight: 1000;
+    margin-left: 5px;
+}
+
+.contenido-escritura p span:nth-child(4) {
+    font-size: 0.6rem;
+}
+
+.contenido_title_description h1 {
+    font-size: 1.5rem;
+    padding: 20px 0;
+}
+
+.contenido-elenco-genero ul li {
+    padding: 8px 0;
+    list-style: none;
+}
+
+.contenido-elenco-genero ul li span {
+    color: gray;
+}
+
+.contenido-elenco-genero ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contenido-elenco-genero ul li a:hover {
+    text-decoration-color: #fff;
+}
+
+.contenido-episodios {
+    padding: 0 5%;
+}
+
+
+/* Episodios */
+
+.title-episodios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-episodios h1 {
+    font-size: 2rem;
+}
+
+.title-episodios h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.lista-episodios ul li {
+    list-style: none;
+    padding: 15px;
+    border-bottom: 1px solid #434037;
+    margin: 30px 0;
+}
+
+.lista-episodios ul li a {
+    text-decoration: none;
+}
+
+.escritura-episodio {
+    display: flex;
+    align-items: center;
+}
+
+.escritura-episodio .img-episodio {
+    max-width: 150px;
+    max-height: 150px;
+    position: relative;
+}
+
+.escritura-episodio .img-episodio i {
+    font-size: 3rem;
+    color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    display: none;
+    transition: 0.5s ease-in all;
+}
+
+.escritura-episodio span {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.escritura-episodio .img-episodio img {
+    width: 100%;
+}
+
+.title_p_episodios {
+    flex: 0 0 70%;
+    padding: 0 6% 0 12px;
+}
+
+.titulos_de_los_episodios {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+}
+
+.escritura-episodio .titulos_de_los_episodios h1,
+.escritura-episodio .titulos_de_los_episodios h2 {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.escritura-episodio .titulos_de_los_episodios h1 {
+    font-weight: 800;
+}
+
+.escritura-episodio .p_episodios p {
+    color: #d2d2d2;
+    font-size: 1rem;
+    margin: 0;
+    padding: 10px 0;
+}
+
+
+/* Mas titulos similares.... */
+
+.contenedor-similares {
+    padding: 2% 5%;
+}
+
+.contenedor-similares .title-similares h1 {
+    font-size: 1.7rem;
+    color: #fff;
+    padding-bottom: 1rem;
+}
+
+.contenido-similares {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.body-similares {
+    background-color: #2f2f2f;
+    border-radius: 4px;
+    min-height: 100%;
+    cursor: pointer;
+}
+
+.body-similares .img-similares {
+    position: relative;
+    width: 100%;
+}
+
+.body-similares .img-similares i {
+    position: absolute;
+    font-size: 3rem;
+    top: 35%;
+    left: 41%;
+    transition: 0.5s ease-in all;
+    display: none;
+}
+
+.body-similares .img-similares img {
+    width: 100%;
+    border-radius: 3px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.body-similares .img-similares span {
+    position: absolute;
+    font-size: 1rem;
+    color: #fff;
+    top: 12px;
+    right: 10px;
+    font-weight: 600;
+}
+
+.selector-similares {
+    padding: 20px 13px;
+    position: relative;
+}
+
+.selector-similares .selector1-similares {
+    width: 40%;
+}
+
+.selector-similares .selector1-similares span:nth-child(1) {
+    color: #46d369;
+}
+
+.selector-similares .selector1-similares span:nth-child(2) {
+    border: 1px solid #fff;
+    background-color: #141414;
+    padding: 0 5px;
+    margin-right: 5px;
+}
+
+.selector-similares .selector1-similares a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.selector-similares .selector2-similares a i {
+    position: absolute;
+    font-size: 2.3rem;
+    color: #fff;
+    right: 13px;
+    top: 20%;
+}
+
+.selector-similares .selector2-similares a i:hover {
+    color: #d2d2d2;
+}
+
+.text-similares {
+    padding: 0 1em 1em;
+}
+
+.text-similares p {
+    font-size: 14px;
+    color: #d2d2d2;
+    line-height: 20px;
+}
+
+
+/* Trailers y mas */
+
+.trailers_mas {
+    padding: 3% 5%;
+}
+
+.trailers_mas .title-trailers h1 {
+    font-size: 1.7rem;
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.container-trailers {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    flex-wrap: wrap;
+}
+
+.body-trailers {
+    padding: 1rem 9px;
+}
+
+.body-trailers .img-trailers {
+    width: 100%;
+    position: relative;
+}
+
+.body-trailers .img-trailers i {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    color: #fff;
+    font-size: 3rem;
+    display: none;
+    transition: 0.5s ease-in all;
+}
+
+.body-trailers .img-trailers img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.body-trailers .escritura-trailers {
+    padding: 1rem;
+}
+
+.body-trailers .escritura-trailers h2,
+.body-trailers .escritura-trailers span {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+/* Acerca de .... */
+
+.acerca_de {
+    padding: 0 5% 9%;
+}
+
+.title_acerca_de {
+    padding-bottom: 1rem;
+}
+
+.acerca_de .title_acerca_de h1 {
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.acerca_de .title_acerca_de h1 span {
+    font-weight: 600;
+}
+
+.lista-acerca ul li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+.lista-acerca ul li span {
+    color: grey;
+}
+
+.lista-acerca ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.lista-acerca ul li a:hover {
+    text-decoration-color: #fff;
+}
+
+.lista-acerca ul li a .edad-16 {
+    border: 1px solid #fff;
+    background-color: #141414;
+    ;
+    padding: 0 5px;
+    margin: 0 5px;
+    color: #fff;
+}

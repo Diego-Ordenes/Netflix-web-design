@@ -1,0 +1,953 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Netflix Sans';
+}
+
+
+/* Menu pequeño */
+
+header {
+    padding: 20px 5%;
+    border-bottom: 1px solid #F0ECE5;
+}
+
+.menu-transferir {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-netflix-transferir {
+    max-width: 160px;
+    height: 100%;
+}
+
+.img-netflix-transferir img {
+    width: 100%;
+}
+
+.btn-cerrar-sesion button {
+    color: #000;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+
+/* -------------------------------- Cuerpo Transferir ---------------------------*/
+
+.container-transferir {
+    max-width: 978px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2.5% 0;
+    padding-bottom: 95px;
+}
+
+.content-transferir-1 {
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.content-transferir-1 .img-cuenta-transferir {
+    width: 80px;
+    height: 100%;
+    margin: auto;
+    padding-bottom: 35px;
+}
+
+.content-transferir-1 .img-cuenta-transferir img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.content-transferir-1 .text-1 h1 {
+    font-size: 2.2rem;
+    padding: 5px 0 25px;
+}
+
+.content-transferir-1 .text-2 {
+    padding-bottom: 20px;
+}
+
+.content-transferir-1 .text-2 ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.content-transferir-1 .text-2 ul li p {
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.content-transferir-1 .text-2 ul li i {
+    color: red;
+    font-size: 1.8rem;
+    padding-right: 5px;
+}
+
+.content-transferir-1 .text-2 .copia-p p {
+    text-align: left;
+}
+
+.content-transferir-1 .text-3 button:nth-child(1) {
+    display: block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px 0;
+    color: #fff;
+    background-color: #D1103A;
+    border-radius: 4px;
+    border: none;
+    font-size: 1.8rem;
+}
+
+.content-transferir-1 .text-3 button:nth-child(1):hover {
+    background-color: red;
+}
+
+.content-transferir-1 .text-3 button:nth-child(2) {
+    display: block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px 0;
+    color: #000;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+}
+
+
+/* ----------------------- Footer Transferencia ------------------*/
+
+.container-footer-1 {
+    background-color: #f3f3f3;
+}
+
+.container-footer-2 {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+    height: 100%;
+}
+
+.container-footer-2 .content-1 {
+    display: block;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.container-footer-2 .content-1 p {
+    font-size: 1.3rem;
+    color: #737373;
+}
+
+.container-footer-2 .content-2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.lista-footer ul {
+    padding-right: 4vw;
+}
+
+.lista-footer ul a {
+    text-decoration: none;
+}
+
+.lista-footer ul li {
+    list-style: none;
+    padding-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+
+/* Paso 1-1 de 3 */
+
+.container-transferir-config-member {
+    max-width: 978px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2.5% 0;
+    padding-bottom: 200px;
+    display: none;
+}
+
+.content-transferir-config {
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+.content-transferir-config .trans-text-1 {
+    text-align: left;
+}
+
+.content-transferir-config .trans-text-1 span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.content-transferir-config .trans-text-1 h1 {
+    font-size: 2.2rem;
+    color: #333;
+    padding: 5px 0 20px;
+}
+
+.content-transferir-config .trans-text-1 p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.content-transferir-config .trans-text-2 {
+    display: flex;
+}
+
+.content-transferir-config .trans-text-2 .img-text-2 {
+    width: 170px;
+    margin: 10px 15px 0 0;
+}
+
+.content-transferir-config .trans-text-2 .img-text-2 img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.content-transferir-config .trans-text-2 .inputs-member form input {
+    border-radius: 2px;
+    border: 1px solid gray;
+    color: #000;
+    width: 100%;
+    padding: 15px 3px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.content-transferir-config .trans-text-2 .inputs-member form input:focus {
+    outline-color: #D1103A;
+}
+
+.content-transferir-config .trans-text-3 button {
+    width: 100%;
+    color: #fff;
+    font-size: 1.8rem;
+    border: none;
+    background-color: #D1103A;
+    padding: 15px 0;
+}
+
+.content-transferir-config .trans-text-3 button:hover {
+    background-color: red;
+}
+
+
+/* Paso 2 - 3 */
+
+.container-elige-plan-1 {
+    max-width: 978px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2.5% 0;
+    padding-bottom: 200px;
+}
+
+.content-elige-plan-1 {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.content-elige-plan-1 .elige-text-1 .img-elige i {
+    font-size: 2.7rem;
+    color: #D1103A;
+    padding-bottom: 30px;
+}
+
+.elige-text-1 span {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.elige-text-1 h1 {
+    font-size: 2.3rem;
+    color: #000;
+    padding: 10px 0 30px;
+}
+
+.elige-text-2 ul {
+    padding: 15px 20px 30px;
+}
+
+.elige-text-2 ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+}
+
+.elige-text-2 ul li i {
+    font-size: 2rem;
+    color: #D1103A;
+    padding-right: 9px;
+}
+
+.elige-text-2 ul li p {
+    font-size: 1.3rem;
+    color: #333;
+    text-align: left;
+}
+
+.btn-elige-plan-1 button {
+    color: #fff;
+    border: none;
+    background-color: #D1103A;
+    border-radius: 3px;
+    padding: 12px 0;
+    width: 100%;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.btn-elige-plan-1 button:hover {
+    background-color: red;
+}
+
+
+/* Paso 2 de 3 parte 2 */
+
+.container-elige-plan-2 {
+    max-width: 978px;
+    margin: 0 auto;
+    padding: 2.5% 0 95px;
+}
+
+.content-elige-plan-2 {
+    max-width: 978px;
+    margin: 0 auto;
+    padding-bottom: 95px;
+}
+
+.content-elige-plan-2 .ideal-text-1 {
+    text-align: left;
+}
+
+.content-elige-plan-2 .ideal-text-1 span {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.content-elige-plan-2 .ideal-text-1 h1 {
+    font-size: 2.5rem;
+    color: #000;
+    padding: 12px 0 17px;
+}
+
+.content-elige-plan-2 .ideal-text-1 .list-plan-ideal ul {
+    padding: 5px 0 10px;
+}
+
+.content-elige-plan-2 .ideal-text-1 .list-plan-ideal ul li {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 7px 0;
+}
+
+.content-elige-plan-2 .ideal-text-1 .list-plan-ideal ul li i {
+    font-size: 2rem;
+    color: #D1103A;
+    padding-right: 8px;
+}
+
+.content-elige-plan-2 .ideal-text-1 .list-plan-ideal ul li p {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.ideal-text-2 .planes-elige {
+    display: flex;
+    justify-content: flex-end;
+    /* flex-direction: column; */
+}
+
+.ideal-text-2 .planes-elige .planes-elige-body {
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.ideal-text-2 .planes-elige .planes-elige-body span {
+    width: 125px;
+    height: 125px;
+    text-align: center;
+    color: #fff;
+    background-color: #e50914;
+    margin: 0 auto;
+    font-size: 17px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ideal-text-3 table {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.ideal-text-3 table tbody {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.ideal-text-3 table tbody tr {
+    border-bottom: 1px solid #ccc;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.first-td-table {
+    text-align: left !important;
+    font-size: 1.1rem;
+}
+
+.table-td-body {
+    fill: #737373;
+    color: #737373;
+    font-weight: 500;
+}
+
+.table-td-espacing {
+    width: 40%;
+}
+
+.table-td-body i {
+    font-size: 2rem;
+    color: #D1103A;
+}
+
+.ideal-text-3 table tbody tr td {
+    padding: 12px 16px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 25%;
+    font-size: 1.1rem;
+}
+
+.ideal-text-4 {
+    width: 80%;
+}
+
+.ideal-text-4 p {
+    color: #737373;
+    font-size: 0.9rem;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.ideal-text-4 span a {
+    color: blue;
+    text-decoration: none;
+}
+
+.ideal-text-5-btn {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ideal-text-5-btn button {
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background-color: #e50914;
+    width: 440px;
+    font-size: 1.8rem;
+    padding: 13px 0;
+    cursor: pointer;
+}
+
+.ideal-text-5-btn button:hover {
+    background-color: #F5141F;
+}
+
+
+/* Paso 3 de 3 (Pagar) */
+
+.container-pagar-plan {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2.5% 0 95px;
+}
+
+.content-pagar-plan {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 95px;
+}
+
+.content-pagar-plan .img-lock-pagar {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 8%;
+}
+
+.content-pagar-plan .img-lock-pagar i {
+    font-size: 2rem;
+    color: #D1103A;
+    border-radius: 50%;
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.content-pagar-plan .pagar-text-1 {
+    text-align: center;
+}
+
+.content-pagar-plan .pagar-text-1 span:first-child {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.content-pagar-plan .pagar-text-1 .span-pagar-text-1 {
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.content-pagar-plan .pagar-text-1 h1 {
+    font-size: 2.2rem;
+    color: #000;
+    padding: 12px 0;
+}
+
+.content-pagar-plan .pagar-text-1 p {
+    font-size: 1.3rem;
+    color: #333;
+    padding-bottom: 12px;
+}
+
+.content-pagar-plan .pagar-text-2 {
+    padding: 15px 0;
+}
+
+.span-lock-text-2 {
+    text-align: right;
+}
+
+.content-pagar-plan .pagar-text-2 .span-lock-text-2 span {
+    color: #737373;
+    font-size: 0.7rem;
+}
+
+.content-pagar-plan .pagar-text-2 .span-lock-text-2 span i {
+    padding-left: 6px;
+    color: #E5B824;
+}
+
+.content-pagar-plan .pagar-text-2 .body-pagar-plan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 18px 10px;
+    margin: 5px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    min-height: 60px;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.content-pagar-plan .pagar-text-2 .body-pagar-plan i {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+    padding-right: 15px;
+}
+
+.content-pagar-plan .pagar-text-2 .body-pagar-plan p {
+    font-size: 1.2rem;
+    color: #333;
+    padding-right: 15px;
+}
+
+.icon-arrow-pagar-plan {
+    justify-self: right;
+}
+
+.content-pagar-plan .pagar-text-2 .body-pagar-plan .img-body-pagar-all {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.img-body-pagar {
+    max-width: 35px;
+    max-height: 35px;
+    padding-right: 5px;
+}
+
+.img-body-pagar img {
+    width: 100%;
+}
+
+
+/* Pagar con Tarjeta */
+
+.container-pagar-tarjeta {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 2.5% 0 95px;
+}
+
+.content-pagar-tarjeta {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 95px;
+}
+
+.text-pagar-tarjeta-1 {
+    text-align: left;
+}
+
+.text-pagar-tarjeta-1 span {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.text-pagar-tarjeta-1 h1 {
+    color: #333;
+    font-size: 2.2rem;
+    font-weight: 600;
+    width: 70%;
+    padding-bottom: 1.1rem;
+}
+
+.text-pagar-tarjeta-1 .img-pagar-tarjeta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text-pagar-tarjeta-1 .img-pagar-tarjeta .img-body-pagar-tarjeta {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.text-pagar-tarjeta-1 .img-pagar-tarjeta .img-body-pagar-tarjeta img {
+    width: 100%;
+}
+
+.text-pagar-tarjeta-2 form {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-pagar-tarjeta-2 form input {
+    padding: 20px 5px;
+    color: #333;
+    font-size: 1.1rem;
+    margin: 5px 0;
+    border-radius: 3px;
+    border: 1px solid #B8B8B8;
+    width: 100%;
+}
+
+.input-codigo {
+    position: relative;
+}
+
+.input-codigo i {
+    position: absolute;
+    font-size: 2rem;
+    right: 0;
+    top: 25%;
+    padding-right: 10px;
+    color: #737373;
+}
+
+.text-pagar-tarjeta-3 {
+    display: flex;
+    flex-direction: row;
+    min-height: 72px;
+    padding: 7px 14px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    margin: 5px 0;
+    align-items: center;
+}
+
+.text-pagar-tarjeta-3 .text-valor-tarjeta {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.text-pagar-tarjeta-3 button {
+    background: none;
+    color: blue;
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+}
+
+.text-pagar-tarjeta-3 .text-valor-tarjeta {
+    width: 25%;
+}
+
+.text-valor-tarjeta span:nth-child(1) {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.text-valor-tarjeta span:nth-child(2) {
+    color: #333;
+    font-size: 1rem;
+}
+
+.text-pagar-tarjeta-4 .text-p-1 p {
+    font-size: 1rem;
+    color: #737373;
+    text-align: left;
+    padding: 20px 0 40px;
+}
+
+.text-pagar-tarjeta-4 .text-p-2 p {
+    font-size: 1rem;
+    color: #737373;
+}
+
+.text-pagar-tarjeta-4 .text-p-2 p a {
+    color: blue;
+    text-decoration: none;
+}
+
+.text-pagar-tarjeta-4 .text-p-2 p span {
+    color: #8c8c8c;
+    font-weight: 600;
+}
+
+.text-pagar-tarjeta-4 .btn-iniciar-membresia {
+    padding: 30px 0 0 0;
+}
+
+.text-pagar-tarjeta-4 .btn-iniciar-membresia button {
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.8rem;
+    background-color: #e50914;
+    padding: 15px 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.text-pagar-tarjeta-4 .btn-iniciar-membresia button:hover {
+    background-color: #F5141F;
+}
+
+
+/* Pagar con numero celular */
+
+.container-facturacion-celular {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 2.5% 0 95px;
+}
+
+.content-facturacion-celular {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 95px;
+}
+
+.facturacion-celular-1 {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.facturacion-celular-1 span {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+.facturacion-celular-1 h1 {
+    font-size: 2.2rem;
+    color: #333;
+    padding: 5px 0 12px;
+}
+
+.facturacion-celular-1 .img-fac-celular-1 {
+    width: 45px;
+    height: 45px;
+}
+
+.facturacion-celular-1 .img-fac-celular-1 img {
+    width: 100%;
+}
+
+.facturacion-celular-1 p {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 8px 0;
+}
+
+.p-celular {
+    width: 90%;
+}
+
+.input-numero-celular {
+    position: relative;
+}
+
+.input-numero-content {
+    width: 50px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 34%;
+    left: 2%;
+}
+
+.input-numero-content span {
+    font-size: 0.9rem;
+    padding-left: 10px;
+}
+
+.input-numero-content img {
+    width: 100%;
+}
+
+.input-numero-celular input {
+    width: 100%;
+    padding: 14px 0 14px 80px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.fac-text-codigo {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.fac-text-codigo span {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.text-fac {
+    padding-top: 20px !important;
+}
+
+
+/* Codigo de regalo */
+
+.container-codigo-regalo {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 2.5% 0 95px;
+}
+
+.content-codigo-regalo {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 95px;
+}
+
+.text-codigo-regalo-1 {
+    text-align: left;
+    padding-bottom: 8px;
+}
+
+.text-codigo-regalo-1 span {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.text-codigo-regalo-1 h1 {
+    font-size: 2rem;
+    color: #333;
+    padding-bottom: 20px;
+}
+
+.text-codigo-regalo-1 .input-codigo-regalo input {
+    width: 100%;
+    padding: 15px 4px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.text-codigo-regalo-1 .input-codigo-regalo input:focus {
+    outline: blue;
+}
+
+.btn-canjear-codigo {
+    padding-top: 25px;
+}
+
+.btn-canjear-codigo button {
+    color: #fff;
+    background-color: #D1103A;
+    font-size: 1.7rem;
+    padding: 15px 0;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-canjear-codigo button:hover {
+    background-color: #e50914;
+}
+
+.btn-canjear-codigo .p-canjear-codigo {
+    padding-top: 15px;
+}
+
+.btn-canjear-codigo .p-canjear-codigo p {
+    font-size: 0.8rem;
+    color: #737373;
+}
+
+.btn-canjear-codigo .p-canjear-codigo a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: blue;
+}

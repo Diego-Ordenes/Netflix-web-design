@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de inicio -- Netflix</title>
+    <link rel="stylesheet" href="../css/inicio-netflix.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="icon" href="../img/Netflix_logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Open+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/943e4f11a2.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/943e4f11a2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></script>
+    <script src="https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json">
+    </script>
+</head>
+
+<body>
+    <!-- Menu netflix -->
+    <header>
+        <nav>
+            <div class="img-netflix">
+                <img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Netflix.png" alt="">
+            </div>
+            <div class="nav_menu">
+                <ul>
+                    <a href="#" class="menu-pc">
+                        <li>Inicio</li>
+                    </a>
+                    <a href="#" class="menu-pc">
+                        <li>Series</li>
+                    </a>
+                    <a href="#" class="menu-pc">
+                        <li>Películas</li>
+                    </a>
+                    <a href="#" class="menu-pc">
+                        <li>Nobedades populares</li>
+                    </a>
+                    <a href="#" class="menu-pc">
+                        <li>Mi lista</li>
+                    </a>
+                    <a href="#" class="menu-pc">
+                        <li>Explora por idiomas</li>
+                    </a>
+                    <a href="#" class="menu-responsive-btn" style="display: none;" onclick="MostrarMenuResponsivo();">
+                        <li>Explorar <i class="fa-solid fa-arrow-down"></i></li>
+                    </a>
+                </ul>
+            </div>
+            <div class="nav_menu_perfil">
+                <div class="buscador-input sep-element">
+                    <form autocomplete="off">
+                        <div class="form-div-buscador">
+                            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                            <input type="text" name="q" placeholder="Titulos,Peronas,Generos"></input>
+                        </div>
+                    </form>
+                </div>
+                <div class="icon-recomendation sep-element">
+                    <button id="btn-recomendation" onclick="MostrarRecomendaciones()">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                </div>
+                <div class="img-menu_perfil sep-element">
+                    <div class="img-menu-perfil-user" onclick="MostrarPerfilUser()">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png" alt="">
+                        <i class="fa-solid fa-caret-down " id="icon-perfil-user"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="menu-responsive-all" id="menu-responsive-all">
+            <div class="menu-responsive-container">
+                <div class="arrow-menu-responsive">
+                    <div></div>
+                    <i class="fa-solid fa-arrow-up"></i>
+                </div>
+                <ul>
+                    <a href="#">
+                        <li>Inicio</li>
+                    </a>
+                    <a href="#">
+                        <li>Series</li>
+                    </a>
+                    <a href="#">
+                        <li>Peliculas</li>
+                    </a>
+                    <a href="#">
+                        <li>Novedades populares</li>
+                    </a>
+                    <a href="#">
+                        <li>Mi lista</li>
+                    </a>
+                    <a href="#">
+                        <li>Explora por idiomas</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="recomendation" id="recomendation">
+            <div class="recomendation-body">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="recomendation-body-complete">
+                                <div class="img-recomendation">
+                                    <img src="https://i0.wp.com/xiahpop.com/wp-content/uploads/2022/09/Apari3ncias.jpg?fit=950%2C528&ssl=1" alt="">
+                                </div>
+                                <div class="writing">
+                                    <h2>Estreno</h2>
+                                    <h2>Apari3ncias</h2>
+                                    <span>Hace 1 semana</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="recomendation-body-complete">
+                                <div class="img-recomendation">
+                                    <img src="https://juegodedragones.xyz/wp-content/uploads/2022/11/merlina.jpg" alt="">
+                                </div>
+                                <div class="writing">
+                                    <h2>Estreno</h2>
+                                    <h2>Merlina</h2>
+                                    <span>Hace 2 semana</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="recomendation-body-complete">
+                                <div class="img-recomendation">
+                                    <img src="https://cdnnmundo1.img.sputniknews.com/img/07e6/01/18/1120696405_17:0:2716:1518_1920x0_80_0_0_6c5aca0583206e0f92755717d41d2b80.png" alt="">
+                                </div>
+                                <div class="writing">
+                                    <h2>Las 10 peliculas más populares: Chile</h2>
+                                    <h2>Los titulos favoritos del público</h2>
+                                    <span>Hace 1 semana</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="recomendation-body-complete">
+                                <div class="img-recomendation">
+                                    <img src="http://www.nacionrock.com/wp-content/uploads/netflix-1899-trailer-e1668956424282.webp" alt="">
+                                </div>
+                                <div class="writing">
+                                    <h2>Estreno</h2>
+                                    <h2>1899</h2>
+                                    <span>Hace 3 semana</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="recomendation-body-complete">
+                                <div class="img-recomendation">
+                                    <img src="https://storage.googleapis.com/lanacion-media-storage/2022/03/3acd3bcd-elite.jpg" alt="">
+                                </div>
+                                <div class="writing">
+                                    <h2>Ya disponible</h2>
+                                    <h2>Temporada 6</h2>
+                                    <span>Hace 4 semana</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="recomendation-body-complete">
+                                <div class="img-recomendation">
+                                    <img src="https://i0.wp.com/xiahpop.com/wp-content/uploads/2022/09/Apari3ncias.jpg?fit=950%2C528&ssl=1" alt="">
+                                </div>
+                                <div class="writing">
+                                    <h2>Estreno</h2>
+                                    <h2>Apari3ncias</h2>
+                                    <span>Hace 1 semana</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="recomendation-body-complete">
+                                <div class="img-recomendation">
+                                    <img src="https://i0.wp.com/xiahpop.com/wp-content/uploads/2022/09/Apari3ncias.jpg?fit=950%2C528&ssl=1" alt="">
+                                </div>
+                                <div class="writing">
+                                    <h2>Estreno</h2>
+                                    <h2>Apari3ncias</h2>
+                                    <span>Hace 1 semana</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="recomendation-body-complete">
+                                <div class="img-recomendation">
+                                    <img src="https://i0.wp.com/xiahpop.com/wp-content/uploads/2022/09/Apari3ncias.jpg?fit=950%2C528&ssl=1" alt="">
+                                </div>
+                                <div class="writing">
+                                    <h2>Estreno</h2>
+                                    <h2>Apari3ncias</h2>
+                                    <span>Hace 1 semana</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="perfil-user" id="perfil-user">
+            <div class="perfil-user-body">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <div class="img-perfil-user">
+                                <img src="https://i.pinimg.com/originals/34/62/d2/3462d27440aa255b1c314ff16f4032b4.png" alt="">
+                            </div>
+                            <p class="Escrit-Element">Cote</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <div class="img-perfil-user">
+                                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png" alt="">
+                            </div>
+                            <p class="Escrit-Element">Jony</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <div class="img-perfil-user">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_TwhejcB_QAKNx7TGviTcx0BPMINC33WFlCHMUKGFWA9CTmtE_dX3Ty5_FW04ueIcpBQ&usqp=CAU" alt="">
+                            </div>
+                            <p class="Escrit-Element">Joaco</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <div class="img-perfil-user">
+                                <img src="https://ih0.redbubble.net/image.618410871.2644/flat,1000x1000,075,f.u2.jpg" alt="">
+                            </div>
+                            <p class="Escrit-Element">Tia Yeya</p>
+                        </li>
+                    </a>
+                    <a href="index.html">
+                        <li class="icon-user">
+                            <i class="fa-sharp fa-solid fa-pencil"></i>
+                            <p class="Escrit-Element">Administrar perfiles</p>
+                        </li>
+                    </a>
+                    <a href="transferir_cuenta.html">
+                        <li class="icon-user">
+                            <i class="fa-solid fa-arrows-up-down"></i>
+                            <p class="Escrit-Element">Transferír perfil</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="icon-user">
+                            <i class="fa-regular fa-user"></i>
+                            <p class="Escrit-Element">Cuenta</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="icon-user">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <p class="Escrit-Element">Centro de ayuda</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="cerrar-sesion-user">Cerrar Sesion en Netflix</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Cuerpo Netflix (Inicio) - Video -->
+    <div class="container-video">
+        <!-- <video autoplay loop muted src="../video/pixeles_video.mp4" type="video/mp4"></video> -->
+        <img class="img-video-netflix" src="../img/pixeles_netflix.jpg"></img>
+        <div class="content-video">
+            <div class="img-content-video">
+                <img src="../img/pixeles.png" alt="">
+            </div>
+            <div class="p-content">
+                <p>Cuando los extraterrestres atacan la Tierra como en los antiguos videojuegos, el presidente y sus amigos d ela infancia, los reyes de las maquinitas, se ponen en accíon.</p>
+            </div>
+            <div class="btn-config-video">
+                <button><i class="fa-solid fa-play"></i>Reproducir</button>
+                <button> <p><i class="fa-solid fa-circle-info"></i>Mas información</p></button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="body_cartelera_all">
+        <!-- Cartelera peliculas - Series  1 -->
+        <div class="peliculas-recomendadas content-all">
+            <div class="contenedor-titulo-controles">
+                <h3>Animes Japoneses</h3>
+                <div class="indicadores"></div>
+            </div>
+
+            <div class="contenedor-principal">
+                <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+                <div class="contenedor-carousel">
+                    <div class="carousel">
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/japon_hunde.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/bastard.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/berserk.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/gudetama.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/cuando_cigarras_lloran.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/Terror_Resonance.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/violet_evergarden.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/burbujas.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/darwinds.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/de_yakuza.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/elgran_farsante.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/begninning.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/invasion_alturas.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/devilman.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/karakai.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/komisan.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/tio_otromundo.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/beastars.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/psycho-pass.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/score_girl.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/amor_gata.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/ajin_semihumano.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/carol_tuesday.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/kuroro_basquet.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/lookism.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/saikik.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/palabras_burbujean.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/therme_rome.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/tio_otromundo.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/koraro_vive_solo.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+                <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+            </div>
+        </div>
+
+
+
+        <!-- Cartelera peliculas - Series  2 -->
+        <div class="peliculas-recomendadas_p2 content-all">
+            <div class="contenedor-titulo-controles_p2">
+                <h3>Noches de pelis en familia</h3>
+                <div class="indicadores_p2"></div>
+            </div>
+
+            <div class="contenedor-principal_p2">
+                <button role="button" id="flecha-izquierda_p2" class="flecha-izquierda_p2"><i class="fas fa-angle-left"></i></button>
+
+                <div class="contenedor-carousel_p2">
+                    <div class="carousel_p2">
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_1.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_2.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_3.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_4.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_5.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_6.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_7.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_8.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_9.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_10.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_11.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_12.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_13.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_14.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_15.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_16.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_17.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_18.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_19.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_20.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_21.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_22.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_23.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_24.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_25.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_26.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_27.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_28.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_29.jpg" alt=""></a>
+                        </div>
+                        <div class="pelicula_p2">
+                            <a href="#" onclick="Mostrar_pelicula_serie()"><img src="../img/pelisfamilia_30.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+                <button role="button" id="flecha-derecha_p2" class="flecha-derecha_p2"><i class="fas fa-angle-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Mostrar peliculas -->
+        <div class="contenedor-peliculas-click-fondo" id="contenedor-peliculas-click-fondo">
+            <div class="contenedor-peliculas-body">
+                <div class="peliculas-img_video">
+                    <div class="contenido-img_video">
+                        <img src="../img/apariencias.jpg" alt="Japon se Hunde">
+                        <div class="selectores_img_video">
+                            <div class="selector_img_video_pelicula">
+                                <img src="../img/titulo_apari3ncias.jpg" alt="">
+                            </div>
+                            <div class="buttons_selectores_pelicula">
+                                <button><i class="fa-solid fa-play"></i>Reproducir</button>
+                                <i class="fa-solid fa-plus icon-selectores_pelicula"></i>
+                                <i class="fa-solid fa-thumbs-up icon-selectores_pelicula"></i>
+                                <i class="fa-solid fa-volume-high icon-selectores_pelicula volume_icon"></i>
+                            </div>
+                        </div>
+                        <div class="circle_x">
+                            <i class="fa-solid fa-xmark" onclick="quitar_pelicula_serie()"></i>
+                        </div>
+                    </div>
+                    <div class="contenido-cuerpo-img_video">
+                        <div class="contenido-escritura">
+                            <p>2022<span> 16+ </span> 8 Episodios <span> HD </span><span> AD</span><span>))))</span></p>
+                            <div class="contenido_title_description">
+                                <h1>Cambios</h1>
+                                <p>Tras soportar años de acoso por parte de sus compañeros, Park Hyeong-seok se muda a un vecindario distinto para empezar una nueva vida.Allí,le esperan grandes cambios.</p>
+                            </div>
+                        </div>
+                        <div class="contenido-elenco-genero">
+                            <ul>
+                                <li><span>Elenco:</span>
+                                    <a href="#">Shin Kyu-hyuck,</a>
+                                    <a href="#">Han shin,</a>
+                                    <a href="#">Ryu Seung-gone,</a>
+                                    <a href="#">mas</a>
+                                </li>
+                                <li><span>Géneros:</span>
+                                    <a href="#">De Corea,</a>
+                                    <a href="#">Series de adolescentes,</a>
+                                    <a href="#">Anime sobre la escuela</a>
+                                </li>
+                                <li><span>Este titulo es:</span>
+                                    <a href="#">Emotivo</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contenido-episodios">
+                        <div class="title-episodios">
+                            <h1>Episodios</h1>
+                            <h2>APARI3NCIAS</h2>
+                        </div>
+                        <div class="lista-episodios">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="escritura-episodio">
+                                            <span>1</span>
+                                            <div class="img-episodio">
+                                                <img src="../img/epi_1_apariencias.jpg" alt="">
+                                                <i class="fa-regular fa-circle-play"></i>
+                                            </div>
+                                            <div class="title_p_episodios">
+                                                <div class="titulos_de_los_episodios">
+                                                    <h1>Cambios</h1>
+                                                    <h2>24 min</h2>
+                                                </div>
+                                                <div class="p_episodios">
+                                                    <p>Tras soportar años de acoso por parte de sus compañeros, Park Hyeong-seok se muda a un vecindario distinto para empezar una nueva vida, Alli, le esperan grandes cambios.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="escritura-episodio">
+                                            <span>2</span>
+                                            <div class="img-episodio">
+                                                <img src="../img/epi_2_apariencias.jpg" alt="">
+                                                <i class="fa-regular fa-circle-play"></i>
+                                            </div>
+                                            <div class="title_p_episodios">
+                                                <div class="titulos_de_los_episodios">
+                                                    <h1>Nueva Vida</h1>
+                                                    <h2>24 min</h2>
+                                                </div>
+                                                <div class="p_episodios">
+                                                    <p>Hyeong-seok asiste a la escuela en su nuevo cuerpo y trabaja media jordana en su cuerpo original, Pero, en realidad, Nada ha cambiado.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="escritura-episodio">
+                                            <span>3</span>
+                                            <div class="img-episodio">
+                                                <img src="../img/epi_3_apariencias.jpg" alt="">
+                                                <i class="fa-regular fa-circle-play"></i>
+                                            </div>
+                                            <div class="title_p_episodios">
+                                                <div class="titulos_de_los_episodios">
+                                                    <h1>Amigos</h1>
+                                                    <h2>25 min</h2>
+                                                </div>
+                                                <div class="p_episodios">
+                                                    <p>Un estudiante apodado Basco ayuda al antiguo Hyeong-seok a luchar contra sus acosadores, mientras el nuevo Hyeong-seok se divierte con su primer grupo de amigos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="escritura-episodio">
+                                            <span>4</span>
+                                            <div class="img-episodio">
+                                                <img src="../img/epi_4_apariencias.jpg" alt="">
+                                                <i class="fa-regular fa-circle-play"></i>
+                                            </div>
+                                            <div class="title_p_episodios">
+                                                <div class="titulos_de_los_episodios">
+                                                    <h1>Mamá</h1>
+                                                    <h2>22 min</h2>
+                                                </div>
+                                                <div class="p_episodios">
+                                                    <p>En su nuevo cuerpo, Hyeon-seok lleva a su madre a un café. Basco se indigna cuando los ve juntos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="escritura-episodio">
+                                            <span>5</span>
+                                            <div class="img-episodio">
+                                                <img src="../img/epi_5_apariencias.jpg" alt="">
+                                                <i class="fa-regular fa-circle-play"></i>
+                                            </div>
+                                            <div class="title_p_episodios">
+                                                <div class="titulos_de_los_episodios">
+                                                    <h1>Solidaridad</h1>
+                                                    <h2>22 min</h2>
+                                                </div>
+                                                <div class="p_episodios">
+                                                    <p>Hyeong-seok les da una mano a otros compañeros acosados en la escuela, y un misterioso chico le ofrece ayuda y le da regalos cuando más lo necesita.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="escritura-episodio">
+                                            <span>6</span>
+                                            <div class="img-episodio">
+                                                <img src="../img/epi_6_apariencias.jpg" alt="">
+                                                <i class="fa-regular fa-circle-play"></i>
+                                            </div>
+                                            <div class="title_p_episodios">
+                                                <div class="titulos_de_los_episodios">
+                                                    <h1>Recomendacíon</h1>
+                                                    <h2>26 min</h2>
+                                                </div>
+                                                <div class="p_episodios">
+                                                    <p>Pyeon Deok-hwa se plantea actuar en el festival escolar,pero otros estudiantes hacen todo lo posible por arruinar su sueño de convertirse en rapero.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="escritura-episodio">
+                                            <span>7</span>
+                                            <div class="img-episodio">
+                                                <img src="../img/epi_7_apariencias.jpg" alt="">
+                                                <i class="fa-regular fa-circle-play"></i>
+                                            </div>
+                                            <div class="title_p_episodios">
+                                                <div class="titulos_de_los_episodios">
+                                                    <h1>Colaboracíon especíal</h1>
+                                                    <h2>24 min</h2>
+                                                </div>
+                                                <div class="p_episodios">
+                                                    <p>Bajo la guia de Deok-hwa, Hyeong-seok muestra sus dotes en el canto. Su colaboracion musical fortalece su incipiente amistad</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="escritura-episodio">
+                                            <span>8</span>
+                                            <div class="img-episodio">
+                                                <img src="../img/epi_8_apariencias.jpg" alt="">
+                                                <i class="fa-regular fa-circle-play"></i>
+                                            </div>
+                                            <div class="title_p_episodios">
+                                                <div class="titulos_de_los_episodios">
+                                                    <h1>Muro</h1>
+                                                    <h2>30 min</h2>
+                                                </div>
+                                                <div class="p_episodios">
+                                                    <p>El dia del festival, los ánimos se caldean tras bastidores. Hyeong-seok y Deok-hwa dejan atrás su pasado y sus miedos para cantar una emotiva cancíon.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-similares">
+                        <div class="title-similares">
+                            <h1>Más títulos similares a este</h1>
+                        </div>
+                        <div class="contenido-similares">
+                            <div class="body-similares">
+                                <div class="img-similares">
+                                    <img src="../img/img_1_similares.jpg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <span>20 episodios</span>
+                                </div>
+                                <div class="selector-similares espaciado-similares">
+                                    <div class="selector1-similares">
+                                        <span>75% para ti</span>
+                                        <span>16+</span>
+                                        <a href="#"> 2021</a>
+                                    </div>
+                                    <div class="selector2-similares">
+                                        <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-similares">
+                                    <p>Durante una visita a su patria, un abogado de la mafia coreanoitaliano le da un conglomerada con su propia medicina con extracto de justicia.</p>
+                                </div>
+                            </div>
+                            <div class="body-similares">
+                                <div class="img-similares">
+                                    <img src="../img/limpia_pasion.jpg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <span>16 episodios</span>
+                                </div>
+                                <div class="selector-similares espaciado-similares">
+                                    <div class="selector1-similares">
+                                        <span></span>
+                                        <span>13+</span>
+                                        <a href="#"> 2018</a>
+                                    </div>
+                                    <div class="selector2-similares">
+                                        <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-similares">
+                                    <p>Un romance inesperado surge entre el director de una empresa con fobia a los germenes y una mujer que no es muy limpia, en este drama coreano basado en un comic.</p>
+                                </div>
+                            </div>
+                            <div class="body-similares">
+                                <div class="img-similares">
+                                    <img src="../img/las_inclemencias_amor.jpg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <span>16 episodios</span>
+                                </div>
+                                <div class="selector-similares espaciado-similares">
+                                    <div class="selector1-similares">
+                                        <span></span>
+                                        <span>16+</span>
+                                        <a href="#"> 2022</a>
+                                    </div>
+                                    <div class="selector2-similares">
+                                        <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-similares">
+                                    <p>Para esta esmerada meteorologa y su liberal colega, el amor es tan dificil de prever como clima.</p>
+                                </div>
+                            </div>
+                            <div class="body-similares">
+                                <div class="img-similares">
+                                    <img src="../img/hola_adios.jpg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <span>16 episodios</span>
+                                </div>
+                                <div class="selector-similares espaciado-similares">
+                                    <div class="selector1-similares">
+                                        <span></span>
+                                        <span>13+</span>
+                                        <a href="#"> 2020</a>
+                                    </div>
+                                    <div class="selector2-similares">
+                                        <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-similares">
+                                    <p>El fantasma de una mujer puede reencarnarse por 49 dias y regresa con su pequeña hija y esposo, que volvio a casarse.</p>
+                                </div>
+                            </div>
+                            <div class="body-similares">
+                                <div class="img-similares">
+                                    <img src="../img/un_amor_hermoso.jpg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <span>24 episodios</span>
+                                </div>
+                                <div class="selector-similares espaciado-similares">
+                                    <div class="selector1-similares">
+                                        <span>92% para ti</span>
+                                        <span>13+</span>
+                                        <a href="#"> 2020</a>
+                                    </div>
+                                    <div class="selector2-similares">
+                                        <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-similares">
+                                    <p>Para un adolescente perdidamente enamorada de su vecino y amigo de la infancia, el amor es dulce y dificil a la vez. ¿Podra su relacion evolucionar a medida que crecen?</p>
+                                </div>
+                            </div>
+                            <div class="body-similares">
+                                <div class="img-similares">
+                                    <img src="../img/prohibido_rendirse.jpg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <span>16 episodios</span>
+                                </div>
+                                <div class="selector-similares espaciado-similares">
+                                    <div class="selector1-similares">
+                                        <span></span>
+                                        <span>13+</span>
+                                        <a href="#"> 2022</a>
+                                    </div>
+                                    <div class="selector2-similares">
+                                        <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-similares">
+                                    <p>Una inusual sociedad y amistad nace entre un joven emprendedor y un padre de familia de mediana edad mientras conviven en la casa de una enigmatica prestamista.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="trailers_mas">
+                        <div class="title-trailers">
+                            <h1>Tráilers y mas</h1>
+                        </div>
+                        <div class="container-trailers">
+                            <a href="#">
+                                <div class="body-trailers">
+                                    <div class="img-trailers">
+                                        <img src="../img/trailer_1_apariencias.jpg" alt="">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                    <div class="escritura-trailers">
+                                        <h2>Temporada 1(Avance):</h2>
+                                        <span>APARI3NCIAS</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="body-trailers">
+                                    <div class="img-trailers">
+                                        <img src="../img/trailer_2_apariencias.jpg" alt="">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                    <div class="escritura-trailers">
+                                        <h2>Temporada 1(Avance 2):</h2>
+                                        <span>APARI3NCIAS</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="body-trailers">
+                                    <div class="img-trailers">
+                                        <img src="../img/trailer_3_apariencias.jpg" alt="">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                    <div class="escritura-trailers">
+                                        <h2>Temporada 1(Avance 3):</h2>
+                                        <span>APARI3NCIAS</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="body-trailers">
+                                    <div class="img-trailers">
+                                        <img src="../img/trailer_4_apariencias.jpg" alt="">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                    <div class="escritura-trailers">
+                                        <h2>Temporada 1(Trailer):</h2>
+                                        <span>APARI3NCIAS</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="acerca_de">
+                        <div class="title_acerca_de">
+                            <h1>Acerca de <span>APARI3NCIAS</span></h1>
+                        </div>
+                        <div class="lista-acerca">
+                            <ul>
+                                <li><span>Elenco:</span>
+                                    <a href="#">Shim Kyu-hyuck,</a>
+                                    <a href="#">Han Shin,Ryu Seung-gone,</a>
+                                    <a href="#">Jeon Jae-heon,</a>
+                                    <a href="#">Nam Doh-hyeong,</a>
+                                    <a href="#">Hwang Chang-yung,</a>
+                                    <a href="#">Sa Moon-young,</a>
+                                </li>
+                                <li><span>Géneros:</span>
+                                    <a href="#">De corea,</a>
+                                    <a href="#">Series de adolecentes,</a>
+                                    <a href="#">Anime sobre la escuela</a>
+                                    <a href="#">Anime de drama</a>
+                                    <a href="#">Seríes de anime</a>
+                                </li>
+                                <li><span>Este titulo es:</span>
+                                    <a href="#">Emotivo</a>
+                                </li>
+                                <li><span>Clasificacion por edad:</span>
+                                    <a href="#"><span class="edad-16">16+</span></a>
+                                    <a>Temas fuertes</a>
+                                    <a>Apta para mayores de 16 años</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="../js/menu.js"></script>
+        <script src="../js/body-carrusel.js"></script>
+</body>
+
+</html>

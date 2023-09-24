@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index-netflix.css">
+    <link rel="icon" href="../img/Netflix_logo.png">
+    <title>Netflix</title>
+    <script src="https://kit.fontawesome.com/943e4f11a2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Open+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="top-container"></div>
+    <!--Contenedor Perfiles-->
+    <div class="container-all">
+        <h1>¿Quien está viendo ahora?</h1>
+
+        <div class="lista-profiles">
+            <ul>
+                <li>
+                    <a href="inicio_netflix.html">
+                        <div class="img-profile">
+                            <img src="https://i.pinimg.com/originals/34/62/d2/3462d27440aa255b1c314ff16f4032b4.png" alt="">
+                            <i class="fa-solid fa-pen-to-square icon-MO"></i>
+                        </div>
+                        <div class="cont-name-profile">
+                            <span class="name-profile">Cote</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="inicio_netflix.html">
+                        <div class="img-profile">
+                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png" alt="">
+                            <i class="icon-MO fa-solid fa-pen-to-square"></i>
+                        </div>
+                        <div class="cont-name-profile">
+                            <span class="name-profile">Jony</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="inicio_netflix.html">
+                        <div class="img-profile">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_TwhejcB_QAKNx7TGviTcx0BPMINC33WFlCHMUKGFWA9CTmtE_dX3Ty5_FW04ueIcpBQ&usqp=CAU" alt="">
+                            <i class="icon-MO fa-solid fa-pen-to-square "></i>
+                        </div>
+                        <div class="cont-name-profile">
+                            <span class="name-profile">Joaquin</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="inicio_netflix.html">
+                        <div class="img-profile">
+                            <img src="https://ih0.redbubble.net/image.618410871.2644/flat,1000x1000,075,f.u2.jpg" alt="">
+                            <i class="fa-solid fa-pen-to-square icon-MO"></i>
+                        </div>
+                        <div class="cont-name-profile">
+                            <span class="name-profile">Diego</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="inicio_netflix.html">
+                        <div class="img-profile">
+                            <img src="https://ih0.redbubble.net/image.618363037.0853/flat,1000x1000,075,f.u2.jpg" alt="">
+                            <i class="fa-solid fa-pen-to-square icon-MO"></i>
+                        </div>
+                        <div class="cont-name-profile">
+                            <span class="name-profile">Tia yeya</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container-buttom-administrator">
+            <button type="button" onclick="Editar_Perfil_User();" id="Button-Administrar">Administrar Perfiles</button>
+            <button type="button" onclick="Editar_Perfil_User_Listo();" id="Button-listo">Listo</button>
+        </div>
+
+    </div>
+
+    <!-- Editar Perfil -->
+    <!-- <div class="container-full-edit">
+        <div class="container-st-edit">
+            <h2 class="title-edit">Editar Perfil</h2>
+            <div class="container-edit-perfil">
+                <div class="box-img">
+                    <div class="img-edit">
+                        <img src="https://i.pinimg.com/originals/34/62/d2/3462d27440aa255b1c314ff16f4032b4.png" alt="">
+                        <i class="fa-sharp fa-solid fa-pencil"></i>
+                    </div>
+                </div>
+                <div class="edit-nombre-user">
+                    <input type="text" placeholder="Nombre">
+                </div>
+                <div class="edit-idioma">
+                    <h1>Idioma:</h1>
+                </div>
+                <div class="edit-alias-games">
+                    <h1>Alias Juegos:</h1>
+                    <p>Tu alias es un nombre único que se usará para jugar con otros miembros de netflix en Jueegos Netflix. <a href="">Mas Info</a></p>
+                    <input type="text" placeholder="Crear Alias de juego">
+                </div>
+                <div class="edit-config-edad">
+                    <h1>Configuracion por edad:</h1>
+                    <ul>
+                        <li>Todas las clasificaciones por edad</li>
+                    </ul>
+                    <p>Mostrar titulos con todas las clasificaciones en este perfil.</p>
+                    <button>Editar</button>
+                </div>
+                <div class="edit-controles-reproduccion">
+                    <h2>Contoles de Reproduccion</h2>
+                    <div>
+                        <input type="checkbox">
+                        <p>Reproducir automatimente el siguiente episodio de una serie en todos los dispositivos</p>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <p>Se reproducen automaticamente los avances mientras navegas (en todos los dispositivos)</p>
+                    </div>
+                </div>
+                <div class="edit-buttons">
+                    <button class="button-guardar-perfil btn-d">Guardar</button>
+                    <button class="button-cancelar-perfil btn-d btn-diseno">Cancelar</button>
+                    <button class="button-eliminar-perfil btn-d btn-diseno">Eliminar Perfil</button>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+    <script src="../js/editor-perfil.js"></script>
+
+</body>
+
+</html>
